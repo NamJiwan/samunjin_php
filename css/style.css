@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  background-color: #432a2e;
+}
+
+header nav {
+  text-align: center;
+  padding: 10px;
+}
+
+header nav ul li {
+  text-align: center;
+  width: 10%;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+main {
+  width: 100vw;
+}
+
+#main {
+  background-image: url(/images/valorant-mainimage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100vh;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+#main .mainText {
+  background-color: #ff4655;
+  color: #ece7e1;
+  font-size: 300%;
+  width: 25%;
+  height: 12%;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 0;
+  font-size: fixed;
+  margin-bottom: 10%;
+  margin-left: 10%;
+}
+
+#defy {
+  background-color: #432a2e;
+  display: flex;
+  flex-wrap: wrap;
+  height: 800px;
+  padding: 80px;
+}
+
+#defy .weAre {
+  color: white;
+  width: 300px;
+  height: 100px;
+  font-size: 4em;
+}
+#defy .valorant {
+  color: #ff4655;
+  font-size: 4em;
+  font-weight: bold;
+}

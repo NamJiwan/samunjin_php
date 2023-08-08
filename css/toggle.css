@@ -1,0 +1,126 @@
+.toggle_btn {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  z-index: 100;
+}
+
+.menu-trigger {
+  margin-top: 40px;
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: -43%;
+  width: 40%;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.menu-trigger.active-5 span:nth-of-type(1) {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.menu-trigger.active-5 span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu-bar05 0.8s forwards;
+  animation: active-menu-bar05 0.8s forwards;
+}
+
+@-webkit-keyframes active-menu-bar05 {
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes active-menu-bar05 {
+  100% {
+    height: 0;
+  }
+}
+
+.menu-trigger.active-5 span:nth-of-type(3) {
+  -webkit-transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
+}
+
+/* side */
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  opacity: 0;
+  z-index: 50;
+  background-color: #a68051;
+  background-image: linear-gradient(0deg, #fff 0%, #a68051 44%);
+
+  transition: 0.5s;
+}
+.side i {
+  font-size: 2rem;
+  margin: 3rem;
+  color: #fff;
+}
+.side.move .lnb {
+  width: 100%;
+  text-align: end;
+}
+.side.move .lnb li {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  border-bottom: 1px solid #d4a770;
+}
+.side.move .lnb li a {
+  color: #fff;
+}
+
+.side.move .gnb {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  text-align: right;
+}
+.side.move .gnb li {
+  padding: 0 30px;
+}
+
+.side.move .gnb li a {
+  color: #fff;
+}
+
+.side.move {
+  right: 0;
+  opacity: 1;
+}

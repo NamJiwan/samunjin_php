@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+        format("woff");
+        font-weight: 200;
+        font-style: normal;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+        font-family: "pretendard-Regular";
+    }
+    
+    h1 {
+        font-size: 3.333vw;
+    }
+    
+    a {
+        text-decoration: none;
+        /* color: black; */
+    }
+    li {
+        color: #f0f2f2;
+        list-style: none;
+    }
+    
+    .contents {
+        width: 80%;
+        margin: 0 auto;
+    }
+    section > h1 {
+        font-size: 3rem;
+        margin: 30px 0;
+    }
+    
+    #darkImg {
+    position: relative;
+    }
+    
+    #darkImg h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f0f2f2;
+    }
+    
+    h1 {
+    text-align: center;
+    }
+    
+    #darkImg img {
+    width: 100%;
+    }
+
+    .brownline {
+        border-bottom: 1px solid #D8C5AE;
+        margin: 30px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+
+    .textbox {
+        width: 100%;
+        height: 100px;
+    }
+
+    .writehere {
+        text-align: right;
+        position: relative;
+        margin-bottom: 70px;
+        border-color: #a68051;
+    }
+
+    .coments {
+        display: flex;
+    }
+
+    .date {
+        font-size: 0.8rem;
+        color:#898989;
+        padding-bottom: 10px;
+    }
+
+    input {
+        border:1px solid #dddddd;
+        outline: none;
+    }
+
+    input:focus {
+        border: 2px solid rgba(79, 79, 79, 0.2);
+        outline: none ;
+    }
+
+    .eotrmf {
+        padding: 5px;
+    }
+
+    .eotrmf h5 {
+        padding: 5px 0;
+    }
+
+    .title h4{
+        padding: 5px 0;
+        font-size: 1rem;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+    .coments img {
+        width: 20px;
+        margin-right: 5px;
+        padding-bottom: 10px;
+    }
+
+    .textbox::placeholder {
+        position:absolute;
+        top: 10px;
+        left: 10px;
+  
+    }
+    
+
+    .eotrmfqjxms {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #a68051 ;
+        border:none;
+        outline: 0;
+        color:#f0f2f2;
+        padding: 10px 20px;
+        border-radius: 12px;
+    }
