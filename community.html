@@ -29,10 +29,13 @@
             </a>
           </div>
           <div class="nb">
-            <ul class="gnb">
-              <li><a href="/login.html">Login</a></li>
-              <li><a href="/signup.html">Sign up</a></li>
-              <li><a href="/mypage.html">My page</a></li>
+            <ul class="gnb" th:if="${isLoggedIn}">
+              <li><a href="/logout">Logout</a></li>
+              <li><a href="/mypage">My page</a></li>
+            </ul>
+            <ul class="gnb" th:unless="${isLoggedIn}">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Sign up</a></li>
             </ul>
             <ul class="lnb">
               <li><a href="/about.html">소개</a></li>
@@ -62,10 +65,17 @@
           <li><a href="/gallery.html">갤러리</a></li>
           <li>커뮤니티</li>
         </ul>
-        <ul class="gnb">
-          <li><a href="/login.html">Login</a></li>
-          <li><a href="/signup.html">Sign up</a></li>
-          <li><a href="/mypage.html">My page</a></li>
+        <ul class="gnb" th:if="${isLoggedIn}">
+          <li><a href="/logout">Logout</a></li>
+          <li><a href="/mypage">My page</a></li>
+        </ul>
+        <ul class="gnb" th:if="${isLoggedIn}">
+          <li><a href="/logout">Logout</a></li>
+          <li><a href="/mypage">My page</a></li>
+        </ul>
+        <ul class="gnb" th:unless="${isLoggedIn}">
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Sign up</a></li>
         </ul>
       </div>
     </header>
