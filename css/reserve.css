@@ -68,6 +68,7 @@ h1 {
   width: 100%;
   position: relative;
   transform: translateY(-4px);
+  margin-bottom: 50px;
 }
 .class_buttons {
   position: relative;
@@ -89,6 +90,7 @@ h1 {
   background-color: #252525;
   text-align: center;
   cursor: pointer;
+  
 }
 
 #class_wrapper label h1 {

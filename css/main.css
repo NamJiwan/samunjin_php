@@ -35,7 +35,7 @@ li {
 /* 메인 컨텐츠 시작 - 메인 이미지 */
 
 #main .mainImg {
-  background: url("../images/main/main.png");
+  background: url("../images/main/main_sm.jpg");
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -148,6 +148,7 @@ li {
 .mySwiper {
   width: 80%;
   margin: 0 auto;
+  height: 50%;
 }
 .mySwiper {
   position: absolute !important;
