@@ -14,6 +14,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 카카오로그인 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <!-- 네이버로그인 -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+    charset="utf-8"></script>
+    <!-- 구글로그인 -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
@@ -96,10 +103,14 @@
               <img src="//k.kakaocdn.net/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" width="83%" height="50px" />
             </a>
           </div>
+
           <div class="naverlogin">
             <div id="naver_id_login"></div>
-        </div>
-          <div class="google"></div>
+          </div>
+
+          <div id="g_id_onload" data-client_id="YOUR_CLIENT_ID" data-callback="handleCredentialResponse">
+          </div>
+          <div class="g_id_signin" data-type="icon" data-shape="circle"></div>
         </fieldset>
       </form>
     </section>
@@ -130,7 +141,7 @@
   <script src="/js/toggle.js"></script>
 
   <!-- 카카오로그인 -->
-  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  
   <script>
     //JavaScript 키 : 56d51771a4a9d45bce2747686afe4f96
     window.Kakao.init("3da40457bfdcc4665f55f88b67175d26"); // API Key 입력
@@ -156,12 +167,12 @@
     }
   </script>
   <!-- //네이버 로그인 버튼 노출 영역 -->
-  <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"charset="utf-8"></script>
+ 
   <script type="text/javascript">
     var naver_id_login = new naver_id_login(
-        "gVWlX3_CO1_zi8qfIyTQ",
-        "https://elaborate-nasturtium-7ef512.netlify.app/naver_login/naver_callback.html",
-        
+      "gVWlX3_CO1_zi8qfIyTQ",
+      "https://elaborate-nasturtium-7ef512.netlify.app/naver_login/naver_callback.html",
+
     );
     var state = naver_id_login.getUniqState();
     naver_id_login.setButton("green", 5, 65);
@@ -173,7 +184,35 @@
     console.log(naver_id_login.getProfileData("email"));
     console.log(naver_id_login.getProfileData("nickname"));
     console.log(naver_id_login.getProfileData("age"));
-</script>
+  </script>
+
+  <!-- 구글 소셜 로그인 -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    function handleCredentialResponse(response) {
+        // decodeJwtResponse() is a custom function defined by you
+        // to decode the credential response.
+        const responsePayload = parseJwt(response.credential);
+
+        console.log("ID: " + responsePayload.sub);
+        console.log('Full Name: ' + responsePayload.name);
+        console.log('Given Name: ' + responsePayload.given_name);
+        console.log('Family Name: ' + responsePayload.family_name);
+        console.log("Image URL: " + responsePayload.picture);
+        console.log("Email: " + responsePayload.email); 
+    };
+
+    function parseJwt (token) {
+        var base64Url = token.split('.')[1];
+        var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+
+        return JSON.parse(jsonPayload);
+    };
+
+    </script>
 </body>
 
 </html>
