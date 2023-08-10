@@ -69,10 +69,7 @@
           <li><a href="/logout">Logout</a></li>
           <li><a href="/mypage">My page</a></li>
         </ul>
-        <ul class="gnb" th:if="${isLoggedIn}">
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/mypage">My page</a></li>
-        </ul>
+        
         <ul class="gnb" th:unless="${isLoggedIn}">
           <li><a href="/login">Login</a></li>
           <li><a href="/signup">Sign up</a></li>
