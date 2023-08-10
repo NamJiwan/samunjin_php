@@ -147,6 +147,7 @@
 
   <script>
     //JavaScript 키 : 56d51771a4a9d45bce2747686afe4f96
+    
     window.Kakao.init("3da40457bfdcc4665f55f88b67175d26"); // API Key 입력
 
     function kakaoLogin() {
@@ -162,7 +163,7 @@
             success: (res) => {
               const kakao_account = res.kakao_account; // account 정보 가져오기
               console.log(kakao_account);
-              location.href = 'index.html';
+              
             },
           });
         },
@@ -189,7 +190,7 @@
 
   <script type="text/javascript">
 
-    var naver_id_login = new naver_id_login("gVWlX3_CO1_zi8qfIyTQ", "https://elaborate-nasturtium-7ef512.netlify.app/naver_callback.html");
+    var naver_id_login = new naver_id_login("gVWlX3_CO1_zi8qfIyTQ", "https://elaborate-nasturtium-7ef512.netlify.app");
     var state = naver_id_login.getUniqState();
     naver_id_login.setButton("green", 8, 55);
     naver_id_login.setDomain("https://elaborate-nasturtium-7ef512.netlify.app");
@@ -200,6 +201,7 @@
     console.log(naver_id_login.getProfileData("email"));
     console.log(naver_id_login.getProfileData("nickname"));
     console.log(naver_id_login.getProfileData("age"));
+
   </script>
 
   <!-- 구글 소셜 로그인 -->
@@ -217,7 +219,7 @@
       console.log("Image URL: " + responsePayload.picture);
       console.log("Email: " + responsePayload.email);
       console.log(responsePayload)
-
+      
     };
     function parseJwt(token) {
       var base64Url = token.split('.')[1];
