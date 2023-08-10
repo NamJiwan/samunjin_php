@@ -100,6 +100,7 @@
 .side.move .lnb li {
   font-size: 1.5rem;
   padding: 10px 30px;
+  color: #fff;
   border-bottom: 1px solid #d4a770;
 }
 .side.move .lnb li a {
@@ -114,6 +115,7 @@
 }
 .side.move .gnb li {
   padding: 0 30px;
+  color: #fff;
 }
 
 .side.move .gnb li a {
