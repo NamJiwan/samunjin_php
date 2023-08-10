@@ -112,7 +112,7 @@
             data-client_id="143477412918-9eh29ql0r1ejlgp7gueks5i3tfl7lv27.apps.googleusercontent.com"
             data-callback="handleCredentialResponse">
           </div>
-          <div class="g_id_signin" data-type="icon" data-shape="circle"></div>
+          <div class="g_id_signin" data-type="standard" data-size="large" data-width=255></div>
 
         </fieldset>
       </form>
@@ -162,7 +162,7 @@
             success: (res) => {
               const kakao_account = res.kakao_account; // account 정보 가져오기
               console.log(kakao_account);
-              // location.href = 'index.html';
+              location.href = 'index.html';
             },
           });
         },
@@ -216,6 +216,8 @@
       console.log('Family Name: ' + responsePayload.family_name);
       console.log("Image URL: " + responsePayload.picture);
       console.log("Email: " + responsePayload.email);
+      console.log(responsePayload)
+
     };
     function parseJwt(token) {
       var base64Url = token.split('.')[1];
