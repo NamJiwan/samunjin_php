@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/heaader.css" />
-    <link rel="stylesheet" href="/css/community-write.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/toggle.css" />
+    <link rel="stylesheet" href="./css/heaader.css" />
+    <link rel="stylesheet" href="./css/community-write.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
     <!-- 폰트어썸 CDN -->
     <link
       rel="stylesheet"
@@ -25,26 +25,26 @@
       <section class="contents">
         <nav>
           <div class="logo">
-            <a href="/index.html">
-              <img src="/images/main/logo.png" alt="logo" />
+            <a href="./index.php">
+              <img src="./images/main/logo.png" alt="logo" />
             </a>
           </div>
           <div class="nb">
             <ul class="gnb" th:if="${isLoggedIn}">
-              <li><a href="/logout">Logout</a></li>
-              <li><a href="/mypage">My page</a></li>
+              <li><a href="./logout">Logout</a></li>
+              <li><a href="./mypage">My page</a></li>
             </ul>
             <ul class="gnb" th:unless="${isLoggedIn}">
-              <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Sign up</a></li>
+              <li><a href="./login">Login</a></li>
+              <li><a href="./signup">Sign up</a></li>
             </ul>
             <ul class="lnb">
-              <li><a href="/about.html">소개</a></li>
-              <li><a href="/facility.html">시설</a></li>
-              <li><a href="/map.html">오시는 길</a></li>
-              <li><a href="/reserve.html">예약</a></li>
-              <li><a href="/gallery.html">갤러리</a></li>
-              <li><a href="/community.html">커뮤니티</a></li>
+              <li><a href="./about.php">소개</a></li>
+              <li><a href="./facility.php">시설</a></li>
+              <li><a href="./map.php">오시는 길</a></li>
+              <li><a href="./reserve.php">예약</a></li>
+              <li><a href="./gallery.php">갤러리</a></li>
+              <li><a href="./community.php">커뮤니티</a></li>
             </ul>
           </div>
           <div class="toggle_btn">
@@ -57,29 +57,29 @@
         </nav>
       </section>
       <div class="side">
-        <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="/index.php"><i class="fa-solid fa-house"></i></a>
         <ul class="lnb">
-          <li><a href="/about.html">소개</a></li>
-          <li><a href="/facility.html">시설</a></li>
-          <li><a href="/map.html">오시는 길</a></li>
-          <li><a href="/reserve.html">예약</a></li>
-          <li><a href="/gallery.html">갤러리</a></li>
-          <li><a href="/community.html">커뮤니티</a></li>
+          <li><a href="./about.php">소개</a></li>
+          <li><a href="./facility.php">시설</a></li>
+          <li><a href="./map.php">오시는 길</a></li>
+          <li><a href="./reserve.php">예약</a></li>
+          <li><a href="./gallery.php">갤러리</a></li>
+          <li><a href="./community.php">커뮤니티</a></li>
         </ul>
         <ul class="gnb" th:if="${isLoggedIn}">
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/mypage">My page</a></li>
+          <li><a href="./logout">Logout</a></li>
+          <li><a href="./mypage">My page</a></li>
         </ul>
         <ul class="gnb" th:unless="${isLoggedIn}">
-          <li><a href="/login">Login</a></li>
-          <li><a href="/signup">Sign up</a></li>
+          <li><a href="./login">Login</a></li>
+          <li><a href="./signup">Sign up</a></li>
         </ul>
       </div>
     </header>
 
     <section id="darkImg">
       <div>
-        <img src="/images/sub_community/community_main.jpg" alt="" />
+        <img src="./images/sub_community/community_main.jpg" alt="" />
       </div>
       <h1>community</h1>
     </section>
@@ -109,7 +109,7 @@
             <button type="submit">
               <h2>글쓰기</h2>
             </button>
-            <button type="button" onclick="location.href='/community.html'">
+            <button type="button" onclick="location.href='./community.php'">
               <h2>목록</h2>
             </button>
           </div>
@@ -135,11 +135,11 @@
           </div>
         </div>
         <div class="footerlogo">
-          <img src="/images/main/logo_black.png" alt="logo" />
+          <img src="./images/main/logo_black.png" alt="logo" />
         </div>
       </div>
     </footer>
 
-    <script src="/js/toggle.js"></script>
+    <script src="./js/toggle.js"></script>
   </body>
 </html>

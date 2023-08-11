@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>사문진 소개</title>
-    <link rel="stylesheet" href="/css/heaader.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/toggle.css" />
-    <link rel="stylesheet" href="/css/reserve.css" />
+    <link rel="stylesheet" href="./css/heaader.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
+    <link rel="stylesheet" href="./css/reserve.css" />
     <!-- 캘린더 CSS -->
     <link rel="stylesheet" href="css/pignose.calendar.min.css" />
     <link rel="stylesheet" href="css/style_calender_box.css" />
@@ -29,26 +29,26 @@
       <section class="contents">
         <nav>
           <div class="logo">
-            <a href="index.html">
-              <img src="/images/main/logo.png" alt="logo" />
+            <a href="./index.php">
+              <img src="./images/main/logo.png" alt="logo" />
             </a>
           </div>
           <div class="nb">
             <ul class="gnb" th:if="${isLoggedIn}">
-              <li><a href="/logout">Logout</a></li>
-              <li><a href="/mypage">My page</a></li>
+              <li><a href="./logout">Logout</a></li>
+              <li><a href="./mypage">My page</a></li>
             </ul>
             <ul class="gnb" th:unless="${isLoggedIn}">
-              <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Sign up</a></li>
+              <li><a href="./login">Login</a></li>
+              <li><a href="./signup">Sign up</a></li>
             </ul>
             <ul class="lnb">
-              <li><a href="/about.html">소개</a></li>
-              <li><a href="/facility.html">시설</a></li>
-              <li><a href="/map.html">오시는 길</a></li>
+              <li><a href="./about.php">소개</a></li>
+              <li><a href="./facility.php">시설</a></li>
+              <li><a href="./map.php">오시는 길</a></li>
               <li>예약</li>
-              <li><a href="/gallery.html">갤러리</a></li>
-              <li><a href="/community.html">커뮤니티</a></li>
+              <li><a href="./gallery.php">갤러리</a></li>
+              <li><a href="./community.php">커뮤니티</a></li>
             </ul>
           </div>
           <div class="toggle_btn">
@@ -61,22 +61,22 @@
         </nav>
       </section>
       <div class="side">
-        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="index.php"><i class="fa-solid fa-house"></i></a>
         <ul class="lnb">
-          <li><a href="/about.html">소개</a></li>
-          <li><a href="/facility.html">시설</a></li>
-          <li><a href="/map.html">오시는 길</a></li>
+          <li><a href="./about.php">소개</a></li>
+          <li><a href="./facility.php">시설</a></li>
+          <li><a href="./map.php">오시는 길</a></li>
           <li>예약</li>
-          <li><a href="/gallery.html">갤러리</a></li>
-          <li><a href="/community.html">커뮤니티</a></li>
+          <li><a href="./gallery.php">갤러리</a></li>
+          <li><a href="./community.php">커뮤니티</a></li>
         </ul>
         <ul class="gnb" th:if="${isLoggedIn}">
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/mypage">My page</a></li>
+          <li><a href="./logout">Logout</a></li>
+          <li><a href="./mypage">My page</a></li>
         </ul>
         <ul class="gnb" th:unless="${isLoggedIn}">
-          <li><a href="/login">Login</a></li>
-          <li><a href="/signup">Sign up</a></li>
+          <li><a href="./login">Login</a></li>
+          <li><a href="./signup">Sign up</a></li>
         </ul>
       </div>
     </header>
@@ -84,7 +84,7 @@
     <!-- 메인이미지 -->
     <section id="darkImg">
       <div>
-        <img src="/images/sub_reservation/reservation_main.jpg" alt="" />
+        <img src="./images/sub_reservation/reservation_main.jpg" alt="" />
       </div>
       <h1>Reservation</h1>
     </section>
@@ -146,7 +146,7 @@
             <div class="box">선택하신 날짜 : 2022-06-13 ~ 2022-06-16</div>
             <div class="reserve-select active">
               <h2>사문진 피크닉장 배치도</h2>
-              <img src="/images/sub_reservation/reservation_map.png" alt="" />
+              <img src="./images/sub_reservation/reservation_map.png" alt="" />
               <h2>자리</h2>
               <div class="select-reserve-box">
                 <div>
@@ -220,12 +220,12 @@
           </div>
         </div>
         <div class="footerlogo">
-          <img src="/images/main/logo_black.png" alt="logo" />
+          <img src="./images/main/logo_black.png" alt="logo" />
         </div>
       </div>
     </footer>
 
-    <script src="/js/toggle.js"></script>
-    <script src="/js/calender.js"></script>
+    <script src="./js/toggle.js"></script>
+    <script src="./js/calender.js"></script>
   </body>
 </html>

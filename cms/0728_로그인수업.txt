@@ -1,0 +1,21 @@
+## 소셜로그인 참고 주소
+
+[네이버 로그인 api](https://developers.naver.com/docs/login/api/api.md);
+
+[카카오 로그인 api](https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api);
+
+[구글 로그]
+https://developers.google.com/identity/protocols/oauth2/web-server?hl=ko#httprest
+
+
+추가된부분
+const.php
+common_method.php
+social_login_config.php
+social_login.php
+
+파이어 베이스
+개인프로젝트할때 사용가능
+
+oauth
+타입스크립트

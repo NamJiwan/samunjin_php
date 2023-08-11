@@ -23,13 +23,13 @@
       <section class="contents">
         <nav>
           <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
               <img src="./images/logo_white.png" alt="logo" />
             </a>
           </div>
           <div class="nb">
             <ul class="gnb">
-              <li><a href="./login.html">Login</a></li>
+              <li><a href="./login.php">Login</a></li>
 
               <li>Sign up</li>
             </ul>
@@ -52,7 +52,7 @@
         </nav>
       </section>
       <div class="side">
-        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="index.php"><i class="fa-solid fa-house"></i></a>
         <ul class="lnb">
           <li><a href="#">소개</a></li>
           <li><a href="#">시설</a></li>
@@ -62,7 +62,7 @@
           <li><a href="#">커뮤니티</a></li>
         </ul>
         <ul class="gnb">
-          <li><a href="./login.html">Login</a></li>
+          <li><a href="./login.php">Login</a></li>
           <li><a href="">Sign up</a></li>
         </ul>
       </div>

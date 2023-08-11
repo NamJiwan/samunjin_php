@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>사문진 소개</title>
-    <link rel="stylesheet" href="/css/heaader.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/toggle.css" />
-    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="./css/heaader.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
+    <link rel="stylesheet" href="./css/about.css" />
     <!-- 폰트어썸 CDN -->
     <link
       rel="stylesheet"
@@ -25,26 +25,26 @@
       <section class="contents">
         <nav>
           <div class="logo">
-            <a href="/index.html">
-              <img src="/images/main/logo.png" alt="logo" />
+            <a href="./index.php">
+              <img src="./images/main/logo.png" alt="logo" />
             </a>
           </div>
           <div class="nb">
             <ul class="gnb" th:if="${isLoggedIn}">
-              <li><a href="/logout">Logout</a></li>
-              <li><a href="/mypage">My page</a></li>
+              <li><a href="./login.php">Logout</a></li>
+              <li><a href="./mypage.php">My page</a></li>
             </ul>
             <ul class="gnb" th:unless="${isLoggedIn}">
-              <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Sign up</a></li>
+              <li><a href="./login.php">Login</a></li>
+              <li><a href="./signup.php">Sign up</a></li>
             </ul>
             <ul class="lnb">
               <li>소개</li>
-              <li><a href="/facility.html">시설</a></li>
-              <li><a href="/map.html">오시는 길</a></li>
-              <li><a href="/reserve.html">예약</a></li>
-              <li><a href="/gallery.html">갤러리</a></li>
-              <li><a href="/community.html">커뮤니티</a></li>
+              <li><a href="./facility.php">시설</a></li>
+              <li><a href="./map.php">오시는 길</a></li>
+              <li><a href="./reserve.php">예약</a></li>
+              <li><a href="./gallery.php">갤러리</a></li>
+              <li><a href="./community.php">커뮤니티</a></li>
             </ul>
           </div>
           <div class="toggle_btn">
@@ -57,29 +57,29 @@
         </nav>
       </section>
       <div class="side">
-        <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="/index.php"><i class="fa-solid fa-house"></i></a>
         <ul class="lnb">
           <li>소개</li>
-          <li><a href="/facility.html">시설</a></li>
-          <li><a href="/map.html">오시는 길</a></li>
-          <li><a href="/reserve.html">예약</a></li>
-          <li><a href="/gallery.html">갤러리</a></li>
-          <li><a href="/community.html">커뮤니티</a></li>
+          <li><a href="./facility.php">시설</a></li>
+          <li><a href="./map.php">오시는 길</a></li>
+          <li><a href="./reserve.php">예약</a></li>
+          <li><a href="./gallery.php">갤러리</a></li>
+          <li><a href="./community.php">커뮤니티</a></li>
         </ul>
         <ul class="gnb" th:if="${isLoggedIn}">
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/mypage">My page</a></li>
+          <li><a href="./logout">Logout</a></li>
+          <li><a href="./mypage">My page</a></li>
         </ul>
         <ul class="gnb" th:unless="${isLoggedIn}">
-          <li><a href="/login">Login</a></li>
-          <li><a href="/signup">Sign up</a></li>
+          <li><a href="./login">Login</a></li>
+          <li><a href="./signup">Sign up</a></li>
         </ul>
       </div>
     </header>
 
     <section id="darkImg">
       <div>
-        <img src="/images/sub_about/about_main.jpg" alt="" />
+        <img src="./images/sub_about/about_main.jpg" alt="" />
       </div>
       <h1>About</h1>
     </section>
@@ -88,7 +88,7 @@
       <div class="bigbigbox ">
         <div class="bigbox">
           <div class="imgbox mimg">
-            <img src="/images/sub_about/about_tradition.jpg" alt="" />
+            <img src="./images/sub_about/about_tradition.jpg" alt="" />
           </div>
           <div class="textbox">
             <h4 class="one">01</h4>
@@ -107,13 +107,13 @@
             </p>
           </div>
           <div class="imgbox pcimg">
-            <img src="/images//sub_about/about_tradition.jpg" alt="" />
+            <img src="./images//sub_about/about_tradition.jpg" alt="" />
           </div>
         </div>
 
         <div class="bigbox">
           <div class="imgbox">
-            <img src="/images/sub_about/about_piano.jpg" alt="" />
+            <img src="./images/sub_about/about_piano.jpg" alt="" />
           </div>
           <div class="textbox ptextbox">
             <h4 class="two">02</h4>
@@ -132,7 +132,7 @@
         </div>
         <div class="bigbox">
           <div class="imgbox mimg">
-            <img src="/images/sub_about/about_ferry.jpg" alt="" />
+            <img src="./images/sub_about/about_ferry.jpg" alt="" />
           </div>
           <div class="textbox">
             <h4 class="three">03</h4>
@@ -147,7 +147,7 @@
             </p>
           </div>
           <div class="imgbox pcimg">
-            <img src="/images/sub_about/about_ferry.jpg" alt="" />
+            <img src="./images/sub_about/about_ferry.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -171,11 +171,11 @@
           </div>
         </div>
         <div class="footerlogo">
-          <img src="/images/main/logo_black.png" alt="logo" />
+          <img src="./images/main/logo_black.png" alt="logo" />
         </div>
       </div>
     </footer>
 
-    <script src="/js/toggle.js"></script>
+    <script src="./js/toggle.js"></script>
   </body>
 </html>

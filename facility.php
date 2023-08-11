@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>사문진 시설</title>
-    <link rel="stylesheet" href="/css/heaader.css" />
-    <link rel="stylesheet" href="/css/facility.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/toggle.css" />
+    <link rel="stylesheet" href="./css/heaader.css" />
+    <link rel="stylesheet" href="./css/facility.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
     <!-- 폰트어썸 CDN -->
     <link
       rel="stylesheet"
@@ -20,30 +20,30 @@
   </head>
 <!-- asdf -->
   <body>
-    <header>
+    <header>.
       <section class="contents">
         <nav>
           <div class="logo">
-            <a href="/index.html">
-              <img src="/images/main/logo.png" alt="logo" />
+            <a href="./index.php">
+              <img src="./images/main/logo.png" alt="logo" />
             </a>
           </div>
           <div class="nb">
             <ul class="gnb" th:if="${isLoggedIn}">
-              <li><a href="/logout">Logout</a></li>
-              <li><a href="/mypage">My page</a></li>
+              <li><a href="./logout">Logout</a></li>
+              <li><a href="./mypage">My page</a></li>
             </ul>
             <ul class="gnb" th:unless="${isLoggedIn}">
-              <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Sign up</a></li>
+              <li><a href="./login">Login</a></li>
+              <li><a href="./signup">Sign up</a></li>
             </ul>
             <ul class="lnb">
-              <li><a href="/about.html">소개</a></li>
+              <li><a href="./about.php">소개</a></li>
               <li>시설</li>
-              <li><a href="/map.html">오시는 길</a></li>
-              <li><a href="/reserve.html">예약</a></li>
-              <li><a href="/gallery.html">갤러리</a></li>
-              <li><a href="/community.html">커뮤니티</a></li>
+              <li><a href="./map.php">오시는 길</a></li>
+              <li><a href="./reserve.php">예약</a></li>
+              <li><a href="./gallery.php">갤러리</a></li>
+              <li><a href="./community.php">커뮤니티</a></li>
             </ul>
           </div>
           <div class="toggle_btn">
@@ -56,29 +56,29 @@
         </nav>
       </section>
       <div class="side">
-        <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="./index.php"><i class="fa-solid fa-house"></i></a>
         <ul class="lnb">
-          <li><a href="/about.html">소개</a></li>
+          <li><a href="./about.php">소개</a></li>
           <li>시설</li>
-          <li><a href="/map.html">오시는 길</a></li>
-          <li><a href="/reserve.html">예약</a></li>
-          <li><a href="/gallery.html">갤러리</a></li>
-          <li><a href="/community.html">커뮤니티</a></li>
+          <li><a href="./map.php">오시는 길</a></li>
+          <li><a href="./reserve.php">예약</a></li>
+          <li><a href="./gallery.php">갤러리</a></li>
+          <li><a href="./community.php">커뮤니티</a></li>
         </ul>
         <ul class="gnb" th:if="${isLoggedIn}">
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/mypage">My page</a></li>
+          <li><a href="./logout">Logout</a></li>
+          <li><a href="./mypage">My page</a></li>
         </ul>
         <ul class="gnb" th:unless="${isLoggedIn}">
-          <li><a href="/login">Login</a></li>
-          <li><a href="/signup">Sign up</a></li>
+          <li><a href="./login">Login</a></li>
+          <li><a href="./signup">Sign up</a></li>
         </ul>
       </div>
     </header>
 
     <section id="darkImg">
       <div>
-        <img src="/images/sub_facility/facility_main.jpg" alt="" />
+        <img src="./images/sub_facility/facility_main.jpg" alt="" />
       </div>
       <h1>Facility</h1>
     </section>
@@ -109,7 +109,7 @@
           <div class="class_tab_item">
             <div class="page">
               <h1>사문진 유람선</h1>
-              <img src="/images/sub_facility/ferry/facility_ferry.jpg" alt="" />
+              <img src="./images/sub_facility/ferry/facility_ferry.jpg" alt="" />
               <div class="brownline">
                 <h2>사문진 유람선 소개</h2>
               </div>
@@ -207,7 +207,7 @@
             </table>
             
               <div class="buttonbox">
-                <a href="/reserve.html">
+                <a href="/reserve.php">
                   <button>
                     <h2>예매하기</h2>
                   </button>
@@ -220,7 +220,7 @@
               <h1>사문진 피크닉장</h1>
               <div>
                 <img
-                  src="/images/sub_facility/picnic/facility_picnic.jpg"
+                  src="./images/sub_facility/picnic/facility_picnic.jpg"
                   alt=""
                 />
                 <div class="rowbox">
@@ -259,7 +259,7 @@
                     <text>이용시간 10:00 ~ 18:00</text>
                     <text>예약방법</text>
                     <p>-온라인예약</p>
-                    <a href="/reserve.html">
+                    <a href="./reserve.php">
                       <button class="nomargin">
                         <h2>예매하기</h2>
                       </button>
@@ -311,7 +311,7 @@
                     </div>
                   </div>
                   <img
-                    src="/images/sub_facility/picnic/facility_map.png"
+                    src="./images/sub_facility/picnic/facility_map.png"
                     alt=""
                   />
                 </div>
@@ -340,7 +340,7 @@
                     <p>- 12시까지 미입장시 예약이 취소됩니다.</p>
                   </div>
                   <div class="noimg">
-                    <img src="/images/sub_facility/picnic/no.png" alt="" />
+                    <img src="./images/sub_facility/picnic/no.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -349,7 +349,7 @@
           <div class="class_tab_item">
             <div class="page">
               <h1>사문진 주막촌</h1>
-              <img src="/images/sub_facility/jumak/jumak.jpg" alt="" />
+              <img src="./images/sub_facility/jumak/jumak.jpg" alt="" />
               <div class="rowbox">
                 <div class="halfbox">
                   <div class="brownline">
@@ -391,14 +391,14 @@
                 <div class="secbox">
                   <div class="row">
                     <div class="gukbobbox">
-                      <img src="/images/sub_facility/jumak/gukbob.png" alt="" />
+                      <img src="./images/sub_facility/jumak/gukbob.png" alt="" />
                       <h3>사문진 소고기 국밥</h3>
                       <p>보글보글 끓여 먹는 든든한 소고기 국밥</p>
                     </div>
                     <div class="col">
                       <div>
                         <img
-                          src="/images/sub_facility/jumak/noodle.jpg"
+                          src="./images/sub_facility/jumak/noodle.jpg"
                           alt=""
                         />
                         <h3>사문진 잔치국수</h3>
@@ -406,7 +406,7 @@
                       </div>
                       <div>
                         <img
-                          src="/images/sub_facility/jumak/maemil.jpg"
+                          src="./images/sub_facility/jumak/maemil.jpg"
                           alt=""
                         />
                         <h3>사문진 메밀전병</h3>
@@ -416,12 +416,12 @@
                   </div>
                   <div class="row">
                     <div>
-                      <img src="/images/sub_facility/jumak/buchu.jpg" alt="" />
+                      <img src="./images/sub_facility/jumak/buchu.jpg" alt="" />
                       <h3>사문진 부추전</h3>
                       <p>향긋한 부추 향기와 바삭한 식감의 부추전</p>
                     </div>
                     <div class="dububox">
-                      <img src="/images/sub_facility/jumak/dubu.jpg" alt="" />
+                      <img src="./images/sub_facility/jumak/dubu.jpg" alt="" />
                       <h3>사문진 손두부</h3>
                       <p>고소한 손두부 위에 새콤한 김치를 올려 먹어보자</p>
                     </div>
@@ -433,7 +433,7 @@
           <div class="class_tab_item">
             <div class="page">
               <h1>화원동산</h1>
-              <img src="/images/sub_facility/hwawon/hwawon.jpg" alt="" />
+              <img src="./images/sub_facility/hwawon/hwawon.jpg" alt="" />
               <div class="rowbox">
                 <div class="halfbox">
                   <div class="brownline">
@@ -464,21 +464,21 @@
               <div class="hawon">
                 <div class="rowbox">
                   <img
-                    src="/images/sub_facility/hwawon/hwawon1.jpg"
+                    src="./images/sub_facility/hwawon/hwawon1.jpg"
                     alt=""
                   />
                   <img
-                    src="/images/sub_facility/hwawon/hwawon2.jpg"
+                    src="./images/sub_facility/hwawon/hwawon2.jpg"
                     alt=""
                   />
                 </div>
                 <div class="rowbox">
                   <img
-                    src="/images/sub_facility/hwawon/hwawon3.jpg"
+                    src="./images/sub_facility/hwawon/hwawon3.jpg"
                     alt=""
                   />
                   <img
-                    src="/images/sub_facility/hwawon/hwawon4.jpg"
+                    src="./images/sub_facility/hwawon/hwawon4.jpg"
                     alt=""
                   />
                 </div>
@@ -506,11 +506,11 @@
           </div>
         </div>
         <div class="footerlogo">
-          <img src="/images/main/logo_black.png" alt="logo" />
+          <img src="./images/main/logo_black.png" alt="logo" />
         </div>
       </div>
     </footer>
 
-    <script src="/js/toggle.js"></script>
+    <script src="./js/toggle.js"></script>
   </body>
 </html>

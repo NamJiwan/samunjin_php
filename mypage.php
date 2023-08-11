@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>사문진 로그인</title>
-    <link rel="stylesheet" href="/css/heaader.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/toggle.css" />
-    <link rel="stylesheet" href="/css/mypage.css" />
+    <link rel="stylesheet" href="./css/heaader.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
+    <link rel="stylesheet" href="./css/mypage.css" />
 
     <!-- 폰트어썸 CDN -->
     <link
@@ -27,26 +27,26 @@
       <section class="contents">
         <nav>
           <div class="logo">
-            <a href="index.html">
-              <img src="/images/main/logo.png" alt="logo" />
+            <a href="./index.php">
+              <img src="./images/main/logo.png" alt="logo" />
             </a>
           </div>
           <div class="nb">
             <ul class="gnb" th:if="${isLoggedIn}">
-              <li><a href="/logout">Logout</a></li>
+              <li><a href="./logout.php">Logout</a></li>
               <li>My page</li>
             </ul>
             <ul class="gnb" th:unless="${isLoggedIn}">
-              <li><a href="/login">Login</a></li>
+              <li><a href="./login">Login</a></li>
               <li><a href="/signup">Sign up</a></li>
             </ul>
             <ul class="lnb">
-              <li><a href="/about.html">소개</a></li>
-              <li><a href="/facility.html">시설</a></li>
-              <li><a href="/map.html">오시는 길</a></li>
-              <li><a href="/reserve.html">예약</a></li>
-              <li><a href="/gallery.html">갤러리</a></li>
-              <li><a href="/community.html">커뮤니티</a></li>
+              <li><a href="/about.php">소개</a></li>
+              <li><a href="/facility.php">시설</a></li>
+              <li><a href="/map.php">오시는 길</a></li>
+              <li><a href="/reserve.php">예약</a></li>
+              <li><a href="/gallery.php">갤러리</a></li>
+              <li><a href="/community.php">커뮤니티</a></li>
             </ul>
           </div>
           <div class="toggle_btn">
@@ -59,14 +59,14 @@
         </nav>
       </section>
       <div class="side">
-        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="index.php"><i class="fa-solid fa-house"></i></a>
         <ul class="lnb">
-          <li><a href="/about.html">소개</a></li>
-          <li><a href="/facility.html">시설</a></li>
-          <li><a href="/map.html">오시는 길</a></li>
-          <li><a href="/reserve.html">예약</a></li>
-          <li><a href="/gallery.html">갤러리</a></li>
-          <li><a href="/community.html">커뮤니티</a></li>
+          <li><a href="/about.php">소개</a></li>
+          <li><a href="/facility.php">시설</a></li>
+          <li><a href="/map.php">오시는 길</a></li>
+          <li><a href="/reserve.php">예약</a></li>
+          <li><a href="/gallery.php">갤러리</a></li>
+          <li><a href="/community.php">커뮤니티</a></li>
         </ul>
         <ul class="gnb" th:if="${isLoggedIn}">
           <li><a href="/logout">Logout</a></li>
@@ -127,7 +127,7 @@
 
               <div class="buttonbox">
                 <button class="blackbutton">
-                  <a href="index.html">메인으로</a>
+                  <a href="index.php">메인으로</a>
                 </button>
               </div>
             </div>
