@@ -28,7 +28,7 @@ else $userpoint = "";
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-  <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
+  <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
 </head>
 
 <body>
@@ -47,8 +47,8 @@ else $userpoint = "";
             if (!$userid) {
             ?>
 
-              <li><a href="./login.php">Login</a></li>
-              <li><a href="./signup.php">Sign up</a></li>
+              <li><a href="./login_form.php">Login</a></li>
+              <li><a href="./member_form.php">Sign up</a></li>
             <?php
             } else {
               $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
@@ -99,34 +99,34 @@ else $userpoint = "";
         <li><a href="./community.php">커뮤니티</a></li>
       </ul>
       <ul class="gnb">
-      <?php
-            if (!$userid) {
-            ?>
+        <?php
+        if (!$userid) {
+        ?>
 
-              <li><a href="./login.php">Login</a></li>
-              <li><a href="./signup.php">Sign up</a></li>
-            <?php
-            } else {
-              $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
-            ?>
-              <li><?= $logged ?> </li>
-              <li> | </li>
-              <li><a href="logout.php">로그아웃</a> </li>
-              <li> | </li>
-              <li><a href="member_modify_form.php">정보 수정</a></li>
-            <?php
-            }
-            ?>
-            <?php
-            if ($userlevel == 1) {
-            ?>
-              <li> | </li>
-              <li><a href="admin.php">관리자 모드</a></li>
-            <?php
-            }
-            ?>
-      
-        
+          <li><a href="./login.php">Login</a></li>
+          <li><a href="./member_form.php">Sign up</a></li>
+        <?php
+        } else {
+          $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
+        ?>
+          <li><?= $logged ?> </li>
+          <li> | </li>
+          <li><a href="logout.php">로그아웃</a> </li>
+          <li> | </li>
+          <li><a href="member_modify_form.php">정보 수정</a></li>
+        <?php
+        }
+        ?>
+        <?php
+        if ($userlevel == 1) {
+        ?>
+          <li> | </li>
+          <li><a href="admin.php">관리자 모드</a></li>
+        <?php
+        }
+        ?>
+
+
       </ul>
     </div>
   </header>
@@ -386,7 +386,7 @@ else $userpoint = "";
       if (index > content.length) {
         text.textContent = ""
         index = 0;
-        sleep(3000);
+        // sleep(3000);
       }
     }
     setInterval(typing, 200)

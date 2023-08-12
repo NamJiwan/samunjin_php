@@ -2,6 +2,17 @@
 include "const.php";
 
 ?>
+<?php
+session_start();
+if (isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
+else $userid = "";
+if (isset($_SESSION["username"])) $username = $_SESSION["username"];
+else $username = "";
+if (isset($_SESSION["userlevel"])) $userlevel = $_SESSION["userlevel"];
+else $userlevel = "";
+if (isset($_SESSION["userpoint"])) $userpoint = $_SESSION["userpoint"];
+else $userpoint = "";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,18 +27,14 @@ include "const.php";
   <link rel="stylesheet" href="./css/login_1.css" />
 
   <!-- 폰트어썸 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- 카카오로그인 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <!-- 네이버로그인 -->
-  <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
-    charset="utf-8"></script>
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
   <!-- 구글로그인 -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <meta name="google-signin-client_id"
-    content="143477412918-9eh29ql0r1ejlgp7gueks5i3tfl7lv27.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="143477412918-9eh29ql0r1ejlgp7gueks5i3tfl7lv27.apps.googleusercontent.com">
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="./js/login.js"></script>
@@ -44,13 +51,33 @@ include "const.php";
           </a>
         </div>
         <div class="nb">
-          <ul class="gnb" th:if="${isLoggedIn}">
-            <li><a href="javascript:kakaoLogout();">Logout</a></li>
-            <li><a href="./mypage.php">My page</a></li>
-          </ul>
-          <ul class="gnb" th:unless="${isLoggedIn}">
-            <li>Login</li>
-            <li><a href="./signup.php">Sign up</a></li>
+          <ul class="gnb">
+            <?php
+            if (!$userid) {
+            ?>
+
+              <li><a href="./login_form.php">Login</a></li>
+              <li><a href="./signup.php">Sign up</a></li>
+            <?php
+            } else {
+              $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
+            ?>
+              <li><?= $logged ?> </li>
+              <li> | </li>
+              <li><a href="logout.php">로그아웃</a> </li>
+              <li> | </li>
+              <li><a href="member_modify_form.php">정보 수정</a></li>
+            <?php
+            }
+            ?>
+            <?php
+            if ($userlevel == 1) {
+            ?>
+              <li> | </li>
+              <li><a href="admin.php">관리자 모드</a></li>
+            <?php
+            }
+            ?>
           </ul>
           <ul class="lnb">
             <li><a href="./about.php">소개</a></li>
@@ -71,7 +98,7 @@ include "const.php";
       </nav>
     </section>
     <div class="side">
-      <a href="index.php"><i class="fa-solid fa-house"></i></a>
+      <a href="./index.php"><i class="fa-solid fa-house"></i></a>
       <ul class="lnb">
         <li><a href="./about.php">소개</a></li>
         <li><a href="./facility.php">시설</a></li>
@@ -80,13 +107,35 @@ include "const.php";
         <li><a href="./gallery.php">갤러리</a></li>
         <li><a href="./community.php">커뮤니티</a></li>
       </ul>
-      <ul class="gnb" th:if="${isLoggedIn}">
-        <li><a href="./logout">Logout</a></li>
-        <li><a href="./mypage">My page</a></li>
-      </ul>
-      <ul class="gnb" th:unless="${isLoggedIn}">
-        <li>Login</li>
-        <li><a href="./signup">Sign up</a></li>
+      <ul class="gnb">
+        <?php
+        if (!$userid) {
+        ?>
+
+          <li><a href="./login.php">Login</a></li>
+          <li><a href="./signup.php">Sign up</a></li>
+        <?php
+        } else {
+          $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
+        ?>
+          <li><?= $logged ?> </li>
+          <li> | </li>
+          <li><a href="logout.php">로그아웃</a> </li>
+          <li> | </li>
+          <li><a href="member_modify_form.php">정보 수정</a></li>
+        <?php
+        }
+        ?>
+        <?php
+        if ($userlevel == 1) {
+        ?>
+          <li> | </li>
+          <li><a href="admin.php">관리자 모드</a></li>
+        <?php
+        }
+        ?>
+
+
       </ul>
     </div>
   </header>
@@ -97,40 +146,40 @@ include "const.php";
         <h1>로그인</h1>
       </div>
       <form name="login_form" method="post" action="login.php">
-        
-          <div class="bigBox">
-            <div class="inputBox">
-            <input class="textBox" type="text" name="id" placeholder="아이디" >
-            <input class="textBox" type="password" id="pass" name="pass" placeholder="비밀번호" >
-            </div>
-            <button onclick="check_input()">로그인</button>
+
+        <div class="bigBox">
+          <div class="inputBox">
+            <input class="textBox" type="text" name="id" placeholder="아이디">
+            <input class="textBox" type="password" id="pass" name="pass" placeholder="비밀번호">
           </div>
-          <!-- 카카오로그인 -->
-          <!-- <div class="kakao">
+          <button onclick="check_input()">로그인</button>
+        </div>
+        <!-- 카카오로그인 -->
+        <!-- <div class="kakao">
             <a id="kakao-login-btn" href="javascript:kakaoLogin();">
               <img src="//k.kakaocdn.net/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" width="83%" height="50px" />
             </a>
           </div> -->
-          <!-- 네이버로그인 -->
-          <!-- <div id="naver_id_login"></div> -->
-          <!-- 구글로그인 -->
-          <!-- <div id="g_id_onload"
+        <!-- 네이버로그인 -->
+        <!-- <div id="naver_id_login"></div> -->
+        <!-- 구글로그인 -->
+        <!-- <div id="g_id_onload"
             data-client_id="143477412918-9eh29ql0r1ejlgp7gueks5i3tfl7lv27.apps.googleusercontent.com"
             data-callback="handleCredentialResponse">
           </div>
           <div class="g_id_signin" data-type="standard" data-size="large" data-width=255></div> -->
 
-       
+
       </form>
       <div id="social_login_btn">
-						<!--prompt=login => 자동로그인 해제 -->
-						
-						<!-- php 코드 정렬 -->
-						<a href=<?php echo SocialLogin::socialLoginUrl("google")?>><img src="./images/login/google_btn.png" width="200"></a>
-						<a href=<?php echo SocialLogin::socialLoginUrl("kakao") ?>><img src="./images/login/kakao_login_medium_narrow.png" width="200"></a>
-						<a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>><img src="./images/login/naver_btn.png" width="180"></a>
+        <!--prompt=login => 자동로그인 해제 -->
 
-					</div>
+        <!-- php 코드 정렬 -->
+        <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>><img src="./images/login/google_btn.png" width="200"></a>
+        <a href=<?php echo SocialLogin::socialLoginUrl("kakao") ?>><img src="./images/login/kakao_login_medium_narrow.png" width="200"></a>
+        <a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>><img src="./images/login/naver_btn.png" width="180"></a>
+
+      </div>
     </section>
   </div>
 
