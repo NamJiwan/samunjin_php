@@ -6,6 +6,7 @@ class SocialLogin
 
     //개발자용
     //* api 키
+
     private static $kakaoApi = "3b53e73f526973fc2338b803707932d9";
     private static $googleApi = "349094743844-h1ep0r3bgkjocu41ghqbnmd9ir5nqc34.apps.googleusercontent.com";
     private static $naverApi = "gVWlX3_CO1_zi8qfIyTQ";
