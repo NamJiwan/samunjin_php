@@ -16,7 +16,8 @@
 
     $num   = $_GET["num"];
 
-    $con = mysqli_connect("localhost", "user1", "12345", "sample");
+     // $con = mysqli_connect("localhost", "user1", "12345", "sample");
+     $con = mysqli_connect("svc.sel4.cloudtype.app", "test", "1234", "samunjin", 31023);
     $sql = "delete from members where num = $num";
     mysqli_query($con, $sql);
 
@@ -27,5 +28,3 @@
 	         location.href = 'admin.php';
 	     </script>
 	   ";
-?>
-
