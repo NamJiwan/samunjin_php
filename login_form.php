@@ -24,7 +24,7 @@ else $userpoint = "";
   <link rel="stylesheet" href="./css/heaader.css" />
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/toggle.css" />
-  <link rel="stylesheet" href="./css/login_1.css" />
+  <link rel="stylesheet" href="./css/login.css" />
 
   <!-- 폰트어썸 CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -175,9 +175,9 @@ else $userpoint = "";
         <!--prompt=login => 자동로그인 해제 -->
 
         <!-- php 코드 정렬 -->
-        <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>><img src="./images/login/google_btn.png" width="200"></a>
+        <!-- <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>><img src="./images/login/google_btn.png" width="200"></a>
         <a href=<?php echo SocialLogin::socialLoginUrl("kakao") ?>><img src="./images/login/kakao_login_medium_narrow.png" width="200"></a>
-        <a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>><img src="./images/login/naver_btn.png" width="180"></a>
+        <a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>><img src="./images/login/naver_btn.png" width="180"></a> -->
 
       </div>
     </section>
