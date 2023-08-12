@@ -16,7 +16,7 @@ $accessToken = $model->getAccessToken();
 $profileModel = getProfile($accessToken, $state);
 
 //$mysqlConnect = mysqli_connect("localhost", "user1", "12345", "sample"); con에 저장
-$con = $mysqlConnect;
+$con = mysqli_connect("localhost", "user1", "12345", "sample");
 
 //DB에 회원정보가 있을때
 //DB에 이메일이 있는지 검색
