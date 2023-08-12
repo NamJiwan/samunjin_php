@@ -2,7 +2,7 @@
 
 //현재 폴더 위치를 찾아줌 dirname(__FILE__).
 include_once dirname(__FILE__) . "/social_login_config.php";
-include_once dirname(__FILE__) . "/common_method.php";
+
 
 //a태그에서 response code 받아오기
 $code = $_GET['code'];
@@ -29,7 +29,7 @@ $num_record = mysqli_num_rows($result);
 if ($num_record != 0) {
 
     $row = mysqli_fetch_array($result);
-    
+
     //가입된 계정과 플랫폼이 일치한다면
     if ($row['login_div'] == $state) {
 
@@ -46,12 +46,12 @@ if ($num_record != 0) {
             location.href = 'index.php';
             </script>
         ");
-    }else{
+    } else {
         //플랫폼이 일치하지 않는다면
-        $divValue = array("kakao"=>"카카오","naver"=>"네이버","google"=>"구글");
+        $divValue = array("kakao" => "카카오", "naver" => "네이버", "google" => "구글");
         echo ("
             <script>
-            alert('가입된 이메일이 존재합니다.(".$divValue[$row['login_div']].")');
+            alert('가입된 이메일이 존재합니다.(" . $divValue[$row['login_div']] . ")');
             location.href = 'index.php';
             </script>
         ");
