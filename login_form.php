@@ -165,9 +165,9 @@ include "const.php";
         <!--prompt=login => 자동로그인 해제 -->
 
         <!-- php 코드 정렬 -->
-        <!-- <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>><img src="./images/login/google_btn.png" width="200"></a>
+        <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>><img src="./images/login/google_btn.png" width="200"></a>
         <a href=<?php echo SocialLogin::socialLoginUrl("kakao") ?>><img src="./images/login/kakao_login_medium_narrow.png" width="200"></a>
-        <a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>><img src="./images/login/naver_btn.png" width="180"></a> -->
+        <a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>><img src="./images/login/naver_btn.png" width="180"></a>
 
       </div>
     </section>
