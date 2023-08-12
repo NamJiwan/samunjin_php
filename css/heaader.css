@@ -28,10 +28,11 @@ header nav {
 }
 
 header nav .nb {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-end;
 }
 
 header nav .gnb {
@@ -51,7 +52,7 @@ header nav .gnb li a {
 }
 
 header nav .lnb {
-  width: 100%;
+  width: 50%;
   display: flex;
   text-align: right;
   justify-content: space-between;
@@ -74,6 +75,6 @@ header nav .menu-trigger {
   }
 }
 
-#darkImg{
+#darkImg {
   padding-top: 100px;
 }

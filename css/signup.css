@@ -73,18 +73,12 @@ button {
   border-bottom: 2px solid #a68051;
 }
 
-#login fieldset {
+#login .bigBox {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#login .bigBox {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .buttonbox {
@@ -114,7 +108,20 @@ button {
   width: 100%;
   height: 50px;
   border-radius: 10px;
-  background-color: #f0f2f2;  
+  background-color: #f0f2f2;
+}
+.email_wrap {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.email_textBox {
+  width: 45%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #f0f2f2;
 }
 
 #login button {
