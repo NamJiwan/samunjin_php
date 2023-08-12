@@ -48,7 +48,7 @@ else $userpoint = "";
             ?>
 
               <li><a href="./login_form.php">Login</a></li>
-              <li><a href="./signup.php">Sign up</a></li>
+              <li><a href="./member_form.php">Sign up</a></li>
             <?php
             } else {
               $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
@@ -103,16 +103,16 @@ else $userpoint = "";
         if (!$userid) {
         ?>
 
-          <li><a href="./login.php">Login</a></li>
-          <li><a href="./signup.php">Sign up</a></li>
+          <li><a href="./login_form.php">Login</a></li>
+          <li><a href="./member_form.php">Sign up</a></li>
         <?php
         } else {
           $logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
         ?>
           <li><?= $logged ?> </li>
-          <li> | </li>
+
           <li><a href="logout.php">로그아웃</a> </li>
-          <li> | </li>
+
           <li><a href="member_modify_form.php">정보 수정</a></li>
         <?php
         }
@@ -120,7 +120,7 @@ else $userpoint = "";
         <?php
         if ($userlevel == 1) {
         ?>
-          <li> | </li>
+
           <li><a href="admin.php">관리자 모드</a></li>
         <?php
         }

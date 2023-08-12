@@ -29,9 +29,8 @@ else $userpoint = "";
 </head>
 
 <body>
+	<!-- header -->
 	<header>
-		<!-- header -->
-
 		<section class="contents">
 			<nav>
 				<div class="logo">
@@ -45,7 +44,7 @@ else $userpoint = "";
 						if (!$userid) {
 						?>
 
-							<li><a href="./login.php">Login</a></li>
+							<li><a href="./login_form.php">Login</a></li>
 							<li><a href="./member_form.php">Sign up</a></li>
 						<?php
 						} else {
@@ -78,7 +77,7 @@ else $userpoint = "";
 					</ul>
 				</div>
 				<div class="toggle_btn">
-					<a class="menu-trigger" href="">
+					<a class="menu-trigger" href="#">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -101,16 +100,16 @@ else $userpoint = "";
 				if (!$userid) {
 				?>
 
-					<li><a href="./login.php">Login</a></li>
+					<li><a href="./login_form.php">Login</a></li>
 					<li><a href="./member_form.php">Sign up</a></li>
 				<?php
 				} else {
 					$logged = $username . "(" . $userid . ")님[Level:" . $userlevel . ", Point:" . $userpoint . "]";
 				?>
 					<li><?= $logged ?> </li>
-					<li> | </li>
+
 					<li><a href="logout.php">로그아웃</a> </li>
-					<li> | </li>
+
 					<li><a href="member_modify_form.php">정보 수정</a></li>
 				<?php
 				}
@@ -118,7 +117,7 @@ else $userpoint = "";
 				<?php
 				if ($userlevel == 1) {
 				?>
-					<li> | </li>
+
 					<li><a href="admin.php">관리자 모드</a></li>
 				<?php
 				}
@@ -127,7 +126,6 @@ else $userpoint = "";
 
 			</ul>
 		</div>
-
 	</header>
 	<section>
 		<div id="admin_box">
