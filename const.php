@@ -66,4 +66,4 @@ class SocialLogin
     }
 }
 
-$mysqlConnect = mysqli_connect("https://admin-mariadb-3prof2lll098hrb.sel4.cloudtype.app", "test", "1234", "sample", "3306");
+$mysqlConnect = mysqli_connect("https://admin-mariadb-3prof2lll098hrb.sel4.cloudtype.app", "test", "1234", "samunjin", "3306");
