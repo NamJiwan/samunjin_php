@@ -101,7 +101,7 @@ function getTokenModel($code, $state)
             "grant_type" => "authorization_code"
         );
         $body = json_encode($body_data);
-
+        echo $code;
 
         //url 지정
         curl_setopt($ch, CURLOPT_URL, $returnUrl);

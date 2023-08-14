@@ -9,6 +9,7 @@ class SocialLogin
 
     private static $kakaoApi = "3b53e73f526973fc2338b803707932d9";
     private static $googleApi = "349094743844-h1ep0r3bgkjocu41ghqbnmd9ir5nqc34.apps.googleusercontent.com";
+
     private static $naverApi = "gVWlX3_CO1_zi8qfIyTQ";
 
     //* 시크릿 키
@@ -30,6 +31,7 @@ class SocialLogin
                 return 'https://kauth.kakao.com/oauth/authorize?client_id=' . self::$kakaoApi . '&redirect_uri=' . self::$redirectUrl . '&response_type=code&state=kakao&prompt=login';
             case "naver":
                 return 'https://nid.naver.com/oauth2.0/authorize?client_id=' . self::$naverApi . '&redirect_uri=' . self::$redirectUrl . '&response_type=code&state=naver';
+
             default:
                 return "";
         }
