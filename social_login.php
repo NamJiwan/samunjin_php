@@ -46,7 +46,7 @@ if ($num_record != 0) {
         //     location.href = 'index.php';
         //     </script>
         // ");
-        echo $accessToken;
+
     } else {
         //플랫폼이 일치하지 않는다면
         $divValue = array("kakao" => "카카오", "naver" => "네이버", "google" => "구글");
@@ -78,9 +78,11 @@ if ($num_record != 0) {
 
 
     //홈화면 이동
-    echo ("
-            <script>
-            location.href = 'index.php';
-            </script>
-        ");
+    // echo ("
+    //         <script>
+    //         location.href = 'index.php';
+    //         </script>
+    //     ");
+    echo $code;
+    echo $accessToken;
 }
