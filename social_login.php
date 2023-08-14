@@ -41,11 +41,12 @@ if ($num_record != 0) {
         $_SESSION["state"] = $state;
         $_SESSION["accessToken"] = $accessToken;
 
-        echo ("
-            <script>
-            location.href = 'index.php';
-            </script>
-        ");
+        // echo ("
+        //     <script>
+        //     location.href = 'index.php';
+        //     </script>
+        // ");
+        echo $accessToken;
     } else {
         //플랫폼이 일치하지 않는다면
         $divValue = array("kakao" => "카카오", "naver" => "네이버", "google" => "구글");
